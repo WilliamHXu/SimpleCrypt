@@ -3,7 +3,7 @@ a simple set of crypt problems.
 
 Create a few ciphers. Use String inside of your classes.
 
-* ROT13 - take the 26 letters of the alphabet and create a `String <- doRot13(String)` method in the ROT13 class
+* ROT13 - take the 26 letters of the alphabet and create a `String <- crypt(String)` method in the ROT13 class
 * Caesar - make a subclass of ROT13 that implements the famous caesar cipher.
 * Create you own cipher, using a different set of 
 
@@ -17,7 +17,13 @@ ROT13 is used in online forums as a means of hiding spoilers, punchlines, puzzle
 
 Applying ROT13 to a piece of text merely requires examining its alphabetic characters and replacing each one by the letter 13 places further along in the alphabet, wrapping back to the beginning if necessary.[3] A becomes N, B becomes O, and so on up to M, which becomes Z, then the sequence continues at the beginning of the alphabet: N becomes A, O becomes B, and so on to Z, which becomes M. Only those letters which occur in the English alphabet are affected; numbers, symbols, whitespace, and all other characters are left unchanged. Because there are 26 letters in the English alphabet and 26 = 2 × 13, the ROT13 function is its own inverse:[3]
 
-{\displaystyle {\mbox{ROT}}_{13}({\mbox{ROT}}_{13}(x))=x} {\mbox{ROT}}_{13}({\mbox{ROT}}_{13}(x))=x for any basic Latin-alphabet text x.
+```Java
+String s = "we hold these truths to be self evident"
+
+if (crypt(crypt(s)) == s) {
+  return true;
+}
+```
 In other words, two successive applications of ROT13 restore the original text (in mathematics, this is sometimes called an involution; in cryptography, a reciprocal cipher).
 
 The transformation can be done using a lookup table, such as the following:
