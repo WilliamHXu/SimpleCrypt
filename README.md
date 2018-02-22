@@ -1,12 +1,21 @@
 # SimpleCrypt
 a simple set of crypt problems.
 
+### Part 1
 Create a few ciphers. Use String inside of your classes.
 
 * ROT13 - take the 26 letters of the alphabet and create a `String <- crypt(String)` method in the ROT13 class
-* Make a constructor that takes two arguments to set the cipher correspondence. `ROT13 superSecure = new ROT13("a","j");`
+  * crypt("Why did the chicken cross the road?") should produce "Jul qvq gur puvpxra pebff gur ebnq?"
+  * crypt("Gb trg gb gur bgure fvqr!") should produce "To get to the other side!"
+* Make a constructor that takes two arguments to set the cipher correspondence. `ROT13 superSecure = new ROT13("a","m");`
+  * this defines the SHIFT of the two Character arrays.
 * Caesar - make a subclass of ROT13 that implements the famous caesar cipher.
 * Create you own cipher, using a different set of 
+
+### Part 2
+
+Make a method that reads a textfile (sonnet18.txt), encrypts it, and writes it back out to a different file (sonnet18.enc)
+Prove that when you read in (sonnet18.enc), run the same crypt again, and prove that it produces the same original text.
 
 ## Explanation
 
@@ -30,8 +39,13 @@ In other words, two successive applications of ROT13 restore the original text (
 The transformation can be done using a lookup table, such as the following:
 
 ```
-Input	ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-Output	NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm
+// for ROT13('a'/'m')
+Input	ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+Output	NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm
+
+// for ROT13('a'/'d')
+Input	ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+Output	EFGHIJKLMNOPQRSTUVWXYZABCD efghijklmnopqrstuvwxyzabcd
 ```
 For example, in the following joke, the punchline has been obscured by ROT13:
 
@@ -45,7 +59,3 @@ Jul qvq gur puvpxra pebff gur ebnq?
 To get to the other side!
 ```
 
-### Part2
-
-Make a method that reads a textfile (sonnet18.txt), encrypts it, and writes it back out to a different file (sonnet18.enc)
-Prove that when you read in (sonnet18.enc), run the same crypt again, and prove that it produces the same original text.
