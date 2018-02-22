@@ -4,6 +4,7 @@ a simple set of crypt problems.
 Create a few ciphers. Use String inside of your classes.
 
 * ROT13 - take the 26 letters of the alphabet and create a `String <- crypt(String)` method in the ROT13 class
+* Make a constructor that takes two arguments to set the cipher correspondence. `ROT13 superSecure = new ROT13("a","j");`
 * Caesar - make a subclass of ROT13 that implements the famous caesar cipher.
 * Create you own cipher, using a different set of 
 
