@@ -39,11 +39,11 @@ In other words, two successive applications of ROT13 restore the original text (
 The transformation can be done using a lookup table, such as the following:
 
 ```
-// for ROT13('a'/'m')
+// for ROT13('a', 'm')
 Input	ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 Output	NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm
 
-// for ROT13('a'/'d')
+// for ROT13('a', 'd')
 Input	ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 Output	EFGHIJKLMNOPQRSTUVWXYZABCD efghijklmnopqrstuvwxyzabcd
 ```
