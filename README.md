@@ -28,24 +28,28 @@ ROT13 is used in online forums as a means of hiding spoilers, punchlines, puzzle
 Applying ROT13 to a piece of text merely requires examining its alphabetic characters and replacing each one by the letter 13 places further along in the alphabet, wrapping back to the beginning if necessary.[3] A becomes N, B becomes O, and so on up to M, which becomes Z, then the sequence continues at the beginning of the alphabet: N becomes A, O becomes B, and so on to Z, which becomes M. Only those letters which occur in the English alphabet are affected; numbers, symbols, whitespace, and all other characters are left unchanged.
 
 ```Java
-String s = "we hold these truths to be self evident"
+String s = "we hold these truths to be self evident";
+
+//WHEN you create a ROT13 with 'a' and 'n' THEN 
 
 if (crypt(crypt(s)) == s) {
   return true;
 }
+
+//if anything else, you must use the encrypt/decrypt pair.
 ```
 In other words, two successive applications of ROT13 restore the original text (in mathematics, this is sometimes called an involution; in cryptography, a reciprocal cipher).
 
 The transformation can be done using a lookup table, such as the following:
 
 ```
-// for ROT13('a', 'm')
+// for ROT13('a', 'n')
 Input	ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 Output	NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm
 
 // for ROT13('a', 'd')
 Input	ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
-Output	EFGHIJKLMNOPQRSTUVWXYZABCD efghijklmnopqrstuvwxyzabcd
+Output	DEFGHIJKLMNOPQRSTUVWXYZABC defghijklmnopqrstuvwxyzabc
 ```
 For example, in the following joke, the punchline has been obscured by ROT13:
 
