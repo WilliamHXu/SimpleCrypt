@@ -3,9 +3,9 @@ a simple set of crypt problems.
 
 Create a few ciphers. Use String inside of your classes.
 
-1 ROT13 - take the 26 letters of the alphabet and create a `String <- doRot13(String)` method in the ROT13 class
-2 Caesar - make a subclass of ROT13 that implements the famous caesar cipher.
-3 Create you own cipher, using a different set of 
+* ROT13 - take the 26 letters of the alphabet and create a `String <- doRot13(String)` method in the ROT13 class
+* Caesar - make a subclass of ROT13 that implements the famous caesar cipher.
+* Create you own cipher, using a different set of 
 
 ## Explanation
 
