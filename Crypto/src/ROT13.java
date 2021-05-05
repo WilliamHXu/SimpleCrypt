@@ -10,9 +10,9 @@ public class ROT13  {
         this.shift = temp;
     }
 
-    ROT13() {
-        this.shift = 13;
-    }
+    ROT13(int key) {
+        this.shift = key;
+    } //Takes in a user number for how many places the letter should shift
 
     public String crypt(String text) throws UnsupportedOperationException {
         return crypt(text, shift);
